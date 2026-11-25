@@ -14,8 +14,6 @@ import hmac
 import logging
 from os import path
 
-from pkg_resources import parse_version
-
 from odoo import models, api, fields, _, release
 from odoo.exceptions import ValidationError
 from odoo.tools import convert_xml_import
@@ -151,7 +149,7 @@ class ProviderLyra(models.Model):
 
     @api.model
     def create_lyra_asset(self):
-        if parse_version(release.version) >= parse_version('19'):
+        if release.version_info[0] >= 19:
             filename = 'payment_lyra/static/src/interactions/payment_form.js'
         else:
             filename = 'payment_lyra/static/src/js/payment_form.js'
