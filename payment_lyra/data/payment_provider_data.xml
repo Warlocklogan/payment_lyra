@@ -17,6 +17,7 @@
             <field name="code">lyra</field>
             <field name="state">test</field>
             <field name="company_id" ref="base.main_company" />
+            <field name="module_id" ref="base.module_payment_lyra" />
             <field name="redirect_form_view_id" ref="lyra_provider_button" />
             <field name="inline_form_view_id" ref="lyra_inline_embedded" />
             <field name="environment">test</field>
